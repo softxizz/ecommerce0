@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="Casa Nerd" content="width=device-width, initial-scale=1.0" />
+  <title>Casa Nerd</title>
+  <!-- estilização -->
+  <link rel="stylesheet" href="/homepage/CSS/style.css" />
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <header>
+    <div class="login-suport-container">
+      <div class="CasaNerd">
+
+      </div>
+
+      <a href="#">Suporte</a>
+      <hr>
+      <a href="#">Entrar</a>
+    </div>
+
+    <div class="nav-container">
+      <div class="logo-container">
+        <a href="#"><img src="/homepage/img/LOGOGHOUSE.png" alt="Home"></a>
+      </div>
+
+      <div class="categories-container">
+        <div class="entrar-suporte">
+          <a id="suporte" href="#">Suporte</a>
+          <a id="entrar" href="#">Entrar</a>
+        </div>
+        <div id="nintendo-container" class="categorie" onmouseover="mouseEncima()" onmouseleave="mouseFora()"><svg
+            width="50" role="img" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 14 14">
+            <path id="logo-nintendo"
+              d="m 8.088,13 1.837,0 C 11.613,13 13,11.613 13,9.925 l 0,-5.85 C 13,2.3875 11.613,1 9.925,1 L 8.05,1 C 8.013,1 7.975,1.037 7.975,1.075 l 0,11.85 C 7.9745,12.963 8.0125,13 8.088,13 Z m 2.287,-6.5995 c 0.6755,0 1.1995,0.5625 1.1995,1.199 0,0.676 -0.5625,1.2 -1.1995,1.2 -0.675,0 -1.2,-0.5245 -1.2,-1.2 C 9.1375,6.925 9.7,6.4005 10.375,6.4005 Z M 6.7,1 4.075,1 C 2.3875,1 1,2.3875 1,4.075 l 0,5.85 C 1,11.613 2.3875,13 4.075,13 L 6.7,13 c 0.037,0 0.075,-0.037 0.075,-0.0745 l 0,-11.8505 C 6.7755,1.037 6.7375,1 6.7,1 Z m -0.862,11.0255 -1.763,0 c -1.163,0 -2.1005,-0.9375 -2.1005,-2.1005 l 0,-5.85 c 0,-1.163 0.9375,-2.1005 2.1005,-2.1005 l 1.725,0 0.038,10.051 z M 2.875,4.5995 c 0,0.6375 0.4875,1.125 1.125,1.125 0.6375,0 1.125,-0.4875 1.125,-1.125 0,-0.6365 -0.4875,-1.125 -1.125,-1.125 -0.6375,0 -1.125,0.4885 -1.125,1.125 z" />
+          </svg></div>
+        <div id="playstation" class="categorie"><i class="fa-brands fa-playstation"></i></div>
+        <div id="xbox" class="categorie"><i class="fa-brands fa-xbox"></i></div>
+        <div id="steam" class="categorie"><i class="fa-brands fa-steam"></i></div>
+      </div>
+
+      <div class="search">
+        <div class="search-bar">
+          <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <input type="text" class="search-txt" placeholder="Buscar">
+        </div>
+        <button id="carrinho"><i class="fa-solid fa-bag-shopping"></i></button>
+      </div>
+
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+    </div>
+  </header>
+  <div class="conteudo">
+    <!-- carrossel de imagens -->
+    <section class="slider">
+      <div class="slider-content">
+
+        <input type="radio" name="btn-radio" id="radio1">
+        <input type="radio" name="btn-radio" id="radio2">
+        <input type="radio" name="btn-radio" id="radio3">
+
+        <div class="slide-box primeiro">
+          <img class="img-desktop" src="img/homemaranha.png" alt="slide 1">
+          <img class="img-mobile" src="img/testeMobile.jpeg" alt="slide 1">
+        </div>
+
+        <div class="slide-box">
+          <img class="img-desktop" src="img/nintendo.png" alt="slide 2">
+          <img class="img-mobile" src="img/testeMobile.jpeg" alt="slide 2">
+        </div>
+
+        <div class="slide-box">
+          <img class="img-desktop" src="img/steambanner.png" alt="slide 3">
+          <img class="img-mobile" src="img/testeMobile.jpeg" alt="slide 3">
+        </div>
+
+        <div class="nav-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+        </div>
+
+        <div class="nav-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- produtos -->
+    <div class="produtos">
+      <section class="sessao-produtos">
+        <h2><i class="fa-solid fa-fire"></i> ESQUENTA BLACK</h2>
+        <div class="ofertas-semana"></div>
+      </section>
+
+      <section class="sessao-produtos">
+        <h2><i class="fa-solid fa-crosshairs"></i> MAIS VENDIDOS</h2>
+        <div class="mais-vendidos"></div>
+      </section>
+
+      <section class="sessao-produtos">
+        <h2><i class="fa-solid fa-bolt"></i> LANÇAMENTOS</h2>
+        <div class="lancamentos"></div>
+      </section>
+
+      <section class="sessao-produtos">
+        <h2><i class="fa-solid fa-gift"></i> GIFT CARDS</h2>
+        <div class="gift-cards"></div>
+      </section>
+    </div>
+
+    <!-- saiba mais -->
+    <div class="saiba-mais">
+      <div class="ajuda">
+        <h3>Ajuda</h3>
+        <div>
+          <a href="#">
+            <p>Dúvidas Gerais</p>
+          </a>
+          <a href="#">
+            <p>Entregas</p>
+          </a>
+          <a href="#">
+            <p>Pedidos</p>
+          </a>
+          <a href="#">
+            <p>Pagamentos</p>
+          </a>
+          <a href="#">
+            <p>Produtos</p>
+          </a>
+          <a href="#">
+            <p>Corporativo</p>
+          </a>
+          <a href="#">
+            <p>Fale Conosco</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="sobre-ghouse">
+        <h3>Sobre a GameHouse</h3>
+        <div>
+          <a href="#">
+            <p>Quem Somos?</p>
+          </a>
+          <a href="#">
+            <p>Nosso Objetivo</p>
+          </a>
+          <a href="#">
+            <p>Parcerias</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="redes-sociais">
+        <h3>Redes sociais</h3>
+        <div>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="formas-pagamento">
+        <h3>Formas de pagamento</h3>
+        <div class="formas-pagamento1">
+          <img src="svg/mastercard.svg" alt="mastercard">
+          <img src="svg/visa.svg" alt="visa">
+          <img src="svg/amex.svg" alt="amex">
+          <img src="svg/elo.svg" alt="elo">
+        </div>
+        <div class="formas-pagamento2">
+          <img src="svg/hipercard.svg" alt="hipercard">
+          <img src="svg/discover.svg" alt="discover">
+          <img src="svg/boleto.svg" alt="boleto">
+          <img src="svg/pix.svg" alt="pix">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
