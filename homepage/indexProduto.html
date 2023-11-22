@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+    <!-- estilização -->
+    <link rel="stylesheet" href="CSS/produto.css">
+</head>
+<body>
+    <?php
+   
+    $host = "host";
+    $dbname = "banco_de_dados";
+    $user = "usuario";
+    $pass = "senha";
+
+    // Conectar ao banco de dados
+    try {
+      $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+      die("Erro na conexão com o banco de dados: " . $e->getMessage());
+    }
+
+    // Obtém o ID do produto da URL
+    $id_produto = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+    // Consulta para obter as informações do produto
+    $stmt = $conn->prepare("SELECT * FROM produtos WHERE id = :id");
+    $stmt->bindParam(':id', $id_produto, PDO::PARAM_INT);
+    $stmt->execute();
+
+    // Verifica se o produto existe
+    if ($stmt->rowCount() > 0) {
+      $produto = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    
+    ?>
+    <div class="conteudo">
+        <div class="logo-container">
+            <a href="index.html"><img src="img/LOGOGHOUSE.png" alt="logo-container"></a>
+        </div>
+        <div class="detalhes-produto template-area">
+
+            <div class="nome-produto"><h1><?php echo $produto['nome']; ?></h1></div>
+            // Exibe a imagem do produto
+            echo '<div class="img-produto">';
+            echo '<img src="' . $produto['imagem'] . '" alt="Imagem do Produto">';
+            echo '</div>';
+          } else {
+            echo '<p>Produto não encontrado</p>';
+          }
+
+            <div class="informacoes-produto">
+                    <p>Plataforma:<?php echo $produto['plataforma']; ?>
+                    </p>
+                    <p>Tipo de Mídia:<?php echo $produto['tipo_midia']; ?>
+                    </p>
+                    <p>Preço:<?php echo $produto['preco']; ?>
+                    </p>
+            </div>
+
+            <div class="comprar-produto">
+                <a href="indexFinalizarCompra.html"><div class="comprar-btn">Comprar</div></a>
+            </div>
+            <div class="descricao-produto">
+                <h2>Descrição do Produto:<?php echo $produto['decricao']; ?>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <script src="scriptProduto.js"></script>
+</body>
+</html>

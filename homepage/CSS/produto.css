@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #ffac20;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+h1,
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #42464d;
+}
+
+
+p{
+    color: #555a64;
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.logo-container{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color: #fff;
+}
+
+.logo-container img{
+    /* margin-left: 10px; */
+    width: 150px;
+}
+
+.detalhes-produto{
+    height: 600px;
+    width: 1280px;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    display: grid;
+    background-color: #fff;
+}
+
+.nome-produto{
+    grid-area: nomeProduto;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-produto{
+    grid-area: imgProduto;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-produto img{
+    height: auto;
+    width: auto;
+}
+
+.descricao-produto{
+    grid-area: descricaoProduto;
+    /* border: 1px solid black; */
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.comprar-produto{
+    grid-area: comprarProduto;
+    /* border: 1px solid purple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comprar-btn{
+    background-color: black;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    transition: 0.2s;
+}
+
+.comprar-btn:hover{
+    background-color: #252525;
+}
+
+.informacoes-produto{
+    grid-area: informacoesProduto;
+    /* border: 1px solid red; */
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.informacoes-produto p{
+    margin-top: 30px;
+}
+
+.template-area{
+    grid-template-areas: 
+    "nomeProduto nomeProduto"
+    "imgProduto descricaoProduto"
+    "imgProduto descricaoProduto"
+    "imgProduto informacoesProduto"
+    "imgProduto comprarProduto"
+    ;
+}
+

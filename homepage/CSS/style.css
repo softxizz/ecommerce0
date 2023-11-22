@@ -372,6 +372,8 @@ header {
     /* .slider {
         display: none;
     } */
+
+    
 }
 
 .categories-container.active {
@@ -504,6 +506,41 @@ section.slider {
     justify-content: center;
     flex-direction: row;
     column-gap: 25px;
+    /* overflow: scroll; */
+}
+
+@media (max-width: 900px) {
+    /* Produtos */
+    .ofertas-semana,
+    .mais-vendidos,
+    .lancamentos,
+    .gift-cards {
+        overflow-x: scroll;
+        justify-content: left;
+    }
+
+    .ofertas-semana::-webkit-scrollbar,
+    .mais-vendidos::-webkit-scrollbar,
+    .lancamentos::-webkit-scrollbar,
+    .gift-cards::-webkit-scrollbar{
+        width: 10px;
+    }
+
+    .ofertas-semana::-webkit-scrollbar-thumb,
+    .mais-vendidos::-webkit-scrollbar-thumb,
+    .lancamentos::-webkit-scrollbar-thumb,
+    .gift-cards::-webkit-scrollbar-thumb{
+        border-radius: 50px;
+        background: #ffac20;
+    }
+
+    .ofertas-semana::-webkit-scrollbar-track ,
+    .mais-vendidos::-webkit-scrollbar-track ,
+    .lancamentos::-webkit-scrollbar-track ,
+    .gift-cards::-webkit-scrollbar-track {
+        background: #f7f7f7;
+    }
+
 }
 
 .produto-cartao {

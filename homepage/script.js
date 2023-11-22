@@ -70,27 +70,32 @@ const listaDeOfertas = [
           "/homepage/img/MarvelsSpider-Man2-EdiçãoStandard-PlayStation5.webp",
         titulo: "Marvel's Spider-Man 2 - Edição Standard - PlayStation 5",
         valorAtual: "301,90",
+        id: 10
       },
       {
         imagem:
           "/homepage/img/EldenRingStandardEditionBandaiNamcoXboxOneDigital.webp",
         titulo: "Elden Ring Standard Edition Bandai Namco Xbox One Digital",
         valorAtual: "259,90",
+        id: 11
       },
       {
         imagem: "/homepage/img/diabloIV-PS5.webp",
         titulo: "Diablo IV - Playstation 5",
         valorAtual: "305,60",
+        id: 12
       },
       {
         imagem: "/homepage/img/mortalkombat-ps5.webp",
         titulo: "Mortal Kombat 1 - Playstation 5",
         valorAtual: "279,30",
+        id: 13
       },
       {
         imagem: "/homepage/img/CallofDutyModernWarfare3XboxOneSeriesX.webp",
         titulo: "Call of Duty Modern Warfare 3 - Xbox One/series X",
         valorAtual: "269,90",
+        id: 14
       },
     ],
   },
@@ -101,27 +106,32 @@ const listaDeOfertas = [
         imagem: "/homepage/img/Injustice2LegendaryEdition-XboxOne.webp",
         titulo: "Injustice 2 Legendary Edition - Xbox One",
         valorAtual: "139,93",
+        id: 0
       },
       {
         imagem: "/homepage/img/TheLastOfUsPart2.webp",
         titulo: "The Last of Us Part II - Playstation 4",
         valorAtual: "126,90",
+        id: 1
       },
       {
         imagem: "/homepage/img/SuperMario3DWorldBowsersFuryNintendoSwitch.webp",
         titulo: "Super Mario 3D World + Bowser's Fury - Nintendo Switch",
         valorAtual: "202,90",
+        id: 2
       },
       {
         imagem:
           "/homepage/img/PokémonLegendsArceusStandardEditionNintendoSwitchFísico.webp",
         titulo: "Pokémon Legends: Arceus - Nintendo Switch",
         valorAtual: "202,90",
+        id: 3
       },
       {
         imagem: "/homepage/img/TheLegendofZelda-TearsofKingdom.webp",
         titulo: "The Legend of Zelda: Tears of the Kingdom - Nintendo Switch",
         valorAtual: "216,93",
+        id: 4
       },
     ],
   },
@@ -129,9 +139,34 @@ const listaDeOfertas = [
     categoria: "giftCard",
     produtos: [
       {
-        imagem: "imagem",
-        titulo: "pokemon legends",
-        valorAtual: "202,3",
+        imagem: "/homepage/img/giftCardPlaystation70.webp",
+        titulo: "Gift Card Playstation R$70,00",
+        valorAtual: "70,00",
+        id: 15
+      },
+      {
+        imagem: "/homepage/img/giftCardXbox200.webp",
+        titulo: "Gift Card Xbox R$200,00",
+        valorAtual: "200,00",
+        id: 16
+      },
+      {
+        imagem: "/homepage/img/giftCardNintendo100.webp",
+        titulo: "Gift Card Nintendo R$100,00",
+        valorAtual: "100,00",
+        id: 17
+      },
+      {
+        imagem: "/homepage/img/giftCardSteam.webp",
+        titulo: "Gift Card Steam R$50,00",
+        valorAtual: "50,00",
+        id: 18
+      },
+      {
+        imagem: "/homepage/img/giftCardSteam.webp",
+        titulo: "Gift Card Steam R$100,00",
+        valorAtual: "100,00",
+        id: 19
       },
     ],
   },
@@ -142,29 +177,34 @@ const listaDeOfertas = [
         imagem: "/homepage/img/GodofWarRagnarökStandardEditionSonyPS5.webp",
         titulo: "God of War Ragnarök Standard Edition - Playstation 5",
         valorAtual: "170,90",
+        id: 5
       },
       {
         imagem: "/homepage/img/RedDeadRedemption2-PS5.webp",
         titulo: "Red Dead Redemption 2 - Playstation 5",
         valorAntigo: "129,90",
         valorAtual: "79,90",
+        id: 6
       },
       {
         imagem: "/homepage/img/GTAV-XboxSeriesX.webp",
         titulo: "Grand Theft Auto V - Xbox Series X",
         valorAtual: "129,90",
+        id: 7
       },
       {
         imagem:
           "/homepage/img/MinecraftMasterCollection-XboxOne-MídiaDigital.webp",
         titulo: "Minecraft Master Collection - Xbox One - Mídia Digital",
         valorAtual: "46,90",
+        id: 8
       },
       {
         imagem:
           "/homepage/img/MarioKart8DeluxeMarioKartDeluxeEditionNintendoSwitch.webp",
         titulo: "Mario Kart 8 Deluxe - Nintendo Switch",
         valorAtual: "269,90",
+        id: 9
       },
     ],
   },
@@ -188,6 +228,7 @@ function listarProdutos(listaDeOfertas) {
     for (var i = 0; i < oferta.produtos.length; i++) {
       var produtoCartao = document.createElement("div");
       produtoCartao.classList.add("produto-cartao");
+      const productId = oferta.produtos[i].id;
 
       var favoritarCarrinho = document.createElement("div");
       favoritarCarrinho.classList.add("favoritar-carrinho");
@@ -220,6 +261,9 @@ function listarProdutos(listaDeOfertas) {
       produtoCartao.appendChild(productContent);
       produtoCartao.appendChild(action);
 
+      produtoCartao.addEventListener("click", function(){
+        window.location.href = `/homepage/indexProduto.html?id=${productId}`;
+      });
       divCategoria.appendChild(produtoCartao);
     }
   }

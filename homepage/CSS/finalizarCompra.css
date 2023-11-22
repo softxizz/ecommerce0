@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #ffac20;
+}
+
+i{
+    color: #ffac20;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-top: 20px;
+}
+
+input:placeholder-shown{
+    padding-left: 5px;
+}
+
+.formulario-endereco input, select{
+    width: 200px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    height: 20px;
+    margin-top: 10px;
+    color: black;
+    height: 30px;
+}
+
+input:focus, select:focus{
+    outline: none;
+}
+
+.logo-container{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color: #fff;
+}
+
+.formulario{
+    height: 600px;
+    width: 1280px;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #fff;
+}
+
+.formulario-endereco{
+    border: 1px solid red;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-pagamento{
+    border: 1px solid blue;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.informacoes-produto{
+    border: 1px solid green;
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-produto{
+    border: 1px solid purple;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.finalizarCompra-div{
+    border: 1px solid red;
+    width: 400px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+    
+}
+
+.comprar-btn{
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    transition: 0.2s;
+}
+
+.comprar-btn:hover{
+    background-color: lime;
+}
